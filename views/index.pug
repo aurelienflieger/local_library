@@ -2,4 +2,16 @@ extends layout
 
 block content
   h1= title
-  p Welcome to #{title}
+  p Welcome to the #[em local library]! 
+
+  h1 Dynamic Content 
+
+  p The library has the following record counts: 
+
+  ul
+    li #[strong Books:] !{bookCount}
+    li #[strong Copies:] !{bookInstanceCount}
+    li #[strong Copies available:] !{bookInstanceAvailableCount}
+    li #[strong Authors:] !{authorsCount}
+    li #[strong Genres:] !{genreCount}
+
