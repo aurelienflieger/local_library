@@ -35,4 +35,13 @@ AuthorSchema.virtual("lifespan").get(function getDate() {
   return "unknown lifespan";
 });
 
+AuthorSchema.virtual("dateOfBirthForm").get( () => 
+  DateTime.fromJSDate(this.dateOfBirth).toISODate()
+);
+
+AuthorSchema.virtual("dateOfDeathForm").get( () => 
+  DateTime.fromJSDate(this.dateOfDeathForm).toISODate()
+);
+
+
 module.exports = mongoose.model("Author", AuthorSchema);
